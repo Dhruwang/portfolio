@@ -17,15 +17,19 @@ function App() {
     if (position > 1200) {
       document.getElementById("laptopTop").classList.add("laptopGlow")
       document.getElementById("laptopTop").classList.add("laptopOpen")
-      document.getElementById("intro").style.opacity = 0
-
-
     }
     if (position > 2000) {
-      document.getElementById("intro").style.opacity = `${0.0005 * (position - 2000)}`
+      document.getElementById("Intro").style.display = "flex" 
     }
-    if (position > 2500) {
-      document.getElementById("intro").style.opacity = `${1 - 0.0005 * (position - 2500)}`
+    if(position>5000){
+      document.getElementById("Intro").style.transform = `translateY(${(5000-position)*0.03}vh)` 
+    }
+    if(position>7000){
+    }
+    if(position>9000){
+      document.getElementById("skillColumn1").style.transform = `translateY(${(9000-position)*0.1}%)`
+      document.getElementById("skillColumn2").style.transform = `translateY(${-(9000-position)*0.1}%)`
+      document.getElementById("skillRightInner").style.transform = `translateX(${(9000-position)*0.1}%)`
     }
 
     console.log(position)
