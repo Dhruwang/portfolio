@@ -1,50 +1,41 @@
 import './App.css';
 import Home from "./components/Home"
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 
-// inside component:
 
 function App() {
 
-  const handleScroll = () => {
+  const [scrollHeight, setscrollHeight] = useState()
+  window.onload = function () {getScrollHeight()}
+  window.onscroll = function () { myFunction() };
 
-    const position = window.pageYOffset;
-    if (position < 1200) {
-      document.getElementById("laptop").style.transform = `scale(${0.001 * position})`
-      document.getElementById("laptopTop").classList.remove("laptopGlow")
-      document.getElementById("laptopTop").classList.remove("laptopOpen")
+  function myFunction() {
+    console.log(window.scrollY) 
+    document.getElementById("fswd").style.top = `${window.scrollY>550?0:-55 + 0.1*window.scrollY}vh`
+    document.getElementById("fswd").style.fontSize = `${window.scrollY>500?1:2.5 - 0.003*window.scrollY}rem`
+    document.getElementById("spinner").style.top = `${window.scrollY>550?0:-110 + 0.2*window.scrollY}vh`
+    document.getElementById("spinner").style.left = `${window.scrollY>500?0:50 - 0.1*window.scrollY}vw`
+    console.log(scrollHeight)
+    if(window.scrollY<(1.4*scrollHeight)){
+      document.getElementById("skillsInner").style.transform = "rotate3d(1, 0, 0, 90deg)"
     }
-    if (position > 1200) {
-      document.getElementById("laptopTop").classList.add("laptopGlow")
-      document.getElementById("laptopTop").classList.add("laptopOpen")
+    if(window.scrollY>(1.4*scrollHeight)){
+      document.getElementById("skillsInner").style.transform = "rotate3d(1, 0, 0, 0deg)"
     }
-    if (position > 2000) {
-      document.getElementById("Intro").style.display = "flex" 
-    }
-    if(position>5000){
-      document.getElementById("Intro").style.transform = `translateY(${(5000-position)*0.03}vh)` 
-    }
-    if(position>7000){
-    }
-    if(position>9000){
-      document.getElementById("skillColumn1").style.transform = `translateY(${(9000-position)*0.1}%)`
-      document.getElementById("skillColumn2").style.transform = `translateY(${-(9000-position)*0.1}%)`
-      document.getElementById("skillRightInner").style.transform = `translateX(${(9000-position)*0.1}%)`
-    }
-
-    console.log(position)
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  }
+  function getScrollHeight(){
+    setscrollHeight(document.getElementById("home").scrollHeight)
+  }
+  
   return (
     <>
       <Home />
+      <About />
+      <Skills />
+      <Projects />
     </>
   );
 }
