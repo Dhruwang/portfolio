@@ -22,18 +22,13 @@ export default function Home() {
                 <div className='homeMiddle'>
                     <div className='homeMiddleLeft'>
                     <h1>Jariwala Dhruwang</h1>
+                    <p>Full stack web developer</p>
                     </div>
                     <div className='homeMiddleRight'>
                         
                         {/* <div className='spinner'>
                             <div className='spinnerInner'></div>
                         </div> */}
-                    </div>
-                    
-                </div>
-                <div className='homeBottom'>
-                    <div className='role'
-                    >
                     </div>
                     
                 </div>

@@ -4,6 +4,7 @@ import React, { useEffect,useState } from 'react';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -14,10 +15,8 @@ function App() {
 
   function myFunction() {
     console.log(window.scrollY) 
-    document.getElementById("fswd").style.top = `${window.scrollY>550?0:-55 + 0.1*window.scrollY}vh`
-    document.getElementById("fswd").style.fontSize = `${window.scrollY>500?1:2.5 - 0.003*window.scrollY}rem`
-    document.getElementById("spinner").style.top = `${window.scrollY>550?0:-110 + 0.2*window.scrollY}vh`
-    document.getElementById("spinner").style.left = `${window.scrollY>500?0:50 - 0.1*window.scrollY}vw`
+    document.getElementById("spinner").style.top = `${window.scrollY>500?0:-100 + 0.2*window.scrollY}vh`
+    document.getElementById("spinner").style.left = `${window.scrollY>600?0:60 - 0.1*window.scrollY}vw`
     console.log(scrollHeight)
     if(window.scrollY<(1.4*scrollHeight)){
       document.getElementById("skillsInner").style.transform = "rotate3d(1, 0, 0, 90deg)"
@@ -36,6 +35,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </>
   );
 }
