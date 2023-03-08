@@ -1,35 +1,36 @@
-import React from 'react'
-import Spinner from "../images/spinner.png"
+import React,{useState} from 'react'
+import Spinner1 from "../images/spinner1.png"
+import Spinner2 from "../images/spinner2.png"
 
 export default function About() {
 
-  var themeCount = 0
+  const [themeCount, setthemeCount] = useState(1)
 
   const chanmgeTheme =()=>{
     var r = document.querySelector(':root');
-    if(themeCount===0){
+    if(themeCount===1){
       
     r.style.setProperty('--primary', '#352C2D');
     r.style.setProperty('--secondary', '#E1D5CD');
-    themeCount++;
+    setthemeCount(2);
     }
     else{
       r.style.setProperty('--primary', '#E1D5CD');
     r.style.setProperty('--secondary', '#352C2D');
-    themeCount--;
+    setthemeCount(1);
     }
     
   }
 
   return (
-    <div className='about'>
+    <div className='about' id='about'>
       <div className='aboutLeft' >
         <button className='spinnerBtn' onClick={chanmgeTheme}>
           <div className='spinnerMask'>
             
           </div>
 
-      <img className="spinner" id='spinner' src={Spinner}></img> 
+      <img className="spinner" id='spinner' src={themeCount===1?Spinner2:Spinner1}></img> 
         </button>
       </div>
       <div className='aboutInner'>

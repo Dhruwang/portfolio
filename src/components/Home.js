@@ -12,11 +12,11 @@ export default function Home() {
                         <h2>dhruwang.com</h2>
                     </div>
                     <div className='navbarRight'>
-                        <a href="/">Home</a>
-                        <a href="/">About</a>
-                        <a href="/">Skills</a>
-                        <a href="/">Projects</a>
-                        <a href="/">Contact</a>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
                     </div>
                 </div>
                 <div className='homeMiddle'>

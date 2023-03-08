@@ -12,6 +12,7 @@ body{
   font-family: sequel;
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   
 }
 *{
@@ -19,9 +20,25 @@ body{
   padding: 0;
   margin: 0;
   color: var(--secondary);
+  scroll-behavior: smooth;
   
   
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
 .home{
   height: 100vh;
   width: 100%;
@@ -62,7 +79,7 @@ body{
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .homeMiddleLeft h1{
@@ -74,6 +91,11 @@ body{
 }
 .homeMiddleLeft p{
   font-size: 3vw;
+  animation-name: reveal  ;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .homeMiddleRight{
   height: 100%;
@@ -90,22 +112,7 @@ body{
   top: -100vh;
   left: 60vw;
 }
-.homeBottom{
-  display: flex;
-  height: 30vh;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 2rem;
-  padding: 3rem;
-}
-.homeBottom h2{
-  /* border: 2px solid green;  */
-  width: 60vw;
-  max-height: 10vh;
-  white-space: nowrap;
-  overflow: hidden;
-  /* transition: all 5s ease-in-out;  */
-}
+
 
 @keyframes reveal {
   0%{
@@ -211,19 +218,30 @@ body{
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 5%;
+  transition: 0.5s ease-in-out;
+  transform: translateY(10rem);
+  opacity: 0;
 }
+
+
 
 /* project page css ends */
 /* projectCard css starts  */
 .projectCard{
   width: 30%;
   border: 2px solid var(--secondary);
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   flex-direction: column;
   margin-top: 1rem;
+  animation-duration: 1s;
+}
+.projectCardDown{
+  transform: translateY(5rem);
+}
+.projectCard p{
+  font-size: 0.8rem;
 }
 .projectThumbnail{
   width: 100%;
@@ -258,6 +276,7 @@ body{
   font-family: sequel;
   border-radius: 1rem 0 0 0;
   text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 .btn-inverted{
   width: 48%;
@@ -268,6 +287,17 @@ body{
   font-family: sequel;
   border-radius: 0 0 1rem 0;
   text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.btn-inverted:hover{
+  transform: scale(1.1);
+}
+.btn:hover{
+  transform: scale(1.1);
+}
+.projectCardSlide{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* projectCard css ends */
@@ -282,6 +312,9 @@ body{
 .contactInner{
   width: 40vw;
   padding: 1rem;
+  z-index: 1;
+  transform: translateX(20vw);
+  transition: 0.5s ease-in-out;
 }
 .contactInner h1{
   margin-bottom: 1rem;
@@ -301,12 +334,13 @@ body{
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  background-color: var(--primary);
 }
 .social:hover{
   background-color: var(--secondary);
 }
-.social:hover .social i{
-  color: var(--primary);
+.social:hover i{
+  color: var(--primary)
 } 
 .contactRight{
   width: 40vw;
@@ -314,6 +348,12 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateX(-20vw);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
 
+}
+.contactPageAnimation{
+  transform: translateX(0);
 }
 /* contact page css ends */

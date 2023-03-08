@@ -3,7 +3,7 @@ import storyitup from "../images/storyitup.png"
 
 export default function ProjectCard(props) {
   return (
-    <div className='projectCard'>
+    <div className='projectCard' id='projectCard'>
         <div className='projectThumbnail'>
             <img src={props.imgLink}></img>
         </div>

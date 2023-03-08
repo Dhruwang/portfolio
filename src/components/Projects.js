@@ -85,17 +85,17 @@ export default function Projects() {
         },
     ]
   return (
-    <div className='projects'>
+    <div className='projects' id='projects'>
         <div className='projectsInner'>
             <h1 className='projectsTitle'>Projects</h1>
-            <div className='projectContainer'>
+            <div className='projectContainer' id='projectContainer'>
                 {projectsArr.map((element)=>{
                     return <ProjectCard imgLink={element.imgLink} title={element.title} description={element.description} gitLink={element.gitLink} liveLink={element.liveLink}/>
                 })}          
             </div>
-            <div className='proectContainer2'>
+            <div className='miniProjects' >
                 <h1>Mini Projects</h1>
-                <div className='projectContainer'>
+                <div className='projectContainer' id='projectContainer2'>
                 {miniProjectsArr.map((element)=>{
                     return <ProjectCard imgLink={element.imgLink} title={element.title}  gitLink={element.gitLink} liveLink={element.liveLink}/>
                 })}          
