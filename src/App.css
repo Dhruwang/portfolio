@@ -57,6 +57,7 @@ body{
   align-items: center;
   justify-content: flex-start;
   padding: 1rem;
+  font-size: 1.5vw;
 }
 .navbarRight{
   width: 60%;
@@ -64,6 +65,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  
 }
 .navbarRight a{
   text-decoration: none;
@@ -112,6 +114,12 @@ body{
   top: -100vh;
   left: 60vw;
 }
+.spinner2{
+  height: 40vw;
+  width: 40vw;
+  animation: rotateSpinner 10s linear infinite  ;
+  display: none;
+}
 
 
 @keyframes reveal {
@@ -142,7 +150,7 @@ body{
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   
 }
 .spinnerBtn{
@@ -171,7 +179,7 @@ body{
   perspective: 1000px;
 }
 .skillsInner{
-  width: 60vw;
+  width: 70vw;
   border: 2px solid var(--secondary);
   padding: 1rem;
   transform: rotate3d(1, 0, 0, 90deg);
@@ -191,13 +199,17 @@ body{
   flex-wrap: wrap;
 }
 .skillDiv{
-  width: 10vw;
+  width: 10rem;
   border: 2px solid var(--secondary);
   padding: 0.5rem 1rem;
   margin: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.skillsInner p{
+  text-align: center;
+  padding: 1rem;
 }
 /* project page css starts  */
 .projects{
@@ -357,3 +369,75 @@ body{
   transform: translateX(0);
 }
 /* contact page css ends */
+
+/* media queries  */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .navbarLeft{
+    width: 30%;
+  }
+  .navbarRight{
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  .skillDiv{
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+  .projectCard{
+    width: 47%;
+  }
+  .projectsInner{
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .homeMiddle{
+    flex-direction: column;
+  }
+  .homeMiddleLeft{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .homeMiddleRight{
+    width: 100%;
+  }
+  .aboutLeft{
+    display: none;
+  }
+  .spinner2{
+    display: block;
+  }
+  .aboutInner{
+    width: 90%;
+  }
+  .skillsInner{
+    width: 90%;
+  }
+  .projectsInner{
+    width: 95%;
+  }
+  .contact{
+    flex-direction: column-reverse;
+  }
+  .contactInner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(0);
+  }
+  .contactRight{
+    transform: translateX(0);
+    width: 70%;
+  }
+}
