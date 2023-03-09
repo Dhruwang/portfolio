@@ -9,6 +9,10 @@ export default function Home() {
 
     const [themeCount, setthemeCount] = useState(1)
 
+    const showResponsiveNav=()=>{
+        document.getElementById("responsiveNav").style.transform = "translateX(0)"
+    }
+
     const chanmgeTheme =()=>{
       var r = document.querySelector(':root');
       if(themeCount===1){
@@ -38,6 +42,7 @@ export default function Home() {
                         <a href="#skills">Skills</a>
                         <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>
+                        <button className='navOpenBtn' onClick={showResponsiveNav}><i class="bi bi-list "></i></button>
                     </div>
                 </div>
                 <div className='homeMiddle'>
