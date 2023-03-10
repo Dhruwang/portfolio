@@ -63,6 +63,9 @@ html{
   padding: 1rem;
   font-size: 1.5vw;
 }
+.navbarLeft a{
+  text-decoration: none;
+}
 .navbarRight{
   width: 60%;
   height: 100%;
@@ -531,5 +534,39 @@ html{
   }
   .navbarLeft{
     font-size: 0.8rem;
+  }
+  .aboutInner p{
+    font-size: 0.8rem;
+    padding: 0;
+  }
+  .aboutInner{
+    width: 100%;
+    padding: 1rem;
+  }
+  .skillDiv{
+    font-size: 0.8rem;
+    width: 7rem;
+  }
+  .skillsInner{
+    padding: 0;
+  }
+  .skillsInner h1{
+    padding: 1rem;
+  }
+  .projectCard{
+    width: 100%;
+  }
+  .contact{
+    margin: 2rem 0;
+  }
+  .homeMiddleLeft h1{
+    font-size: 2.5rem;
+  }
+  .homeMiddleLeft p{
+    font-size: 1rem;
+  }
+  .spinner2{
+    width: 20rem;
+    height: 20rem;
   }
 }
