@@ -34,7 +34,7 @@ export default function Home() {
             <div className='homeInner'>
                 <div className='navbar'>
                     <div className='navbarLeft'>
-                        <a href='/'><h2>dhruwang.com</h2></a>
+                        <a href='/'><h2>dhruwang</h2></a>
                     </div>
                     <div className='navbarRight'>
                         <a href="#home">Home</a>

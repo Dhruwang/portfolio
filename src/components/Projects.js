@@ -40,7 +40,7 @@ export default function Projects() {
             title : "WhatsNew",
             description : "Read whats going on in the world with Whatsnew. Made using NewsAPI",
             gitLink : "https://github.com/Dhruwang/WhatsNew",
-            liveLink : ""
+            liveLink : "https://github.com/Dhruwang/WhatsNew"
         },
         {
             imgLink : marketo,
