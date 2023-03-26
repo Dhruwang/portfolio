@@ -18,6 +18,10 @@ export default function Skills() {
               <div className='skillDiv'>Docker</div>
               <div className='skillDiv'>Java</div>
               <div className='skillDiv'>Python</div>
+              <div className='skillDiv'>Solidity</div>
+              <div className='skillDiv'>Web3.js</div>
+              <div className='skillDiv'>Remix</div>
+              <div className='skillDiv'>Hardhat</div>
               <p>My Biggest Skill is I am always learning and mastering new skills !!</p>
             </div>
         </div>
