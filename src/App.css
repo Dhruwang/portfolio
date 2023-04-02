@@ -226,6 +226,7 @@ html{
 }
 /* project page css starts  */
 .projects{
+  margin-top: 5rem;
   width: 100vw;
   display: flex;
   align-items: center;

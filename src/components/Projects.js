@@ -12,6 +12,7 @@ import applewatch from "../images/applewatch.png"
 import colortiles from "../images/colortiles.png"
 import matchmingo from "../images/matchmingo.png"
 import lotterydapp from "../images/lotterydapp.png"
+import ainft from "../images/ainft.png"
 
 export default function Projects() {
 
@@ -100,6 +101,12 @@ export default function Projects() {
             gitLink: "https://github.com/Dhruwang/lottery_dapp",
             liveLink: "https://lotterydappbyjd.netlify.app/"
         },
+        {
+            imgLink: ainft,
+            title: "AINFT",
+            gitLink: "https://github.com/Dhruwang/AINFT",
+            liveLink: "https://ainftbyjd.netlify.app/"
+        }
     ]
     return (
         <div className='projects' id='projects'>
