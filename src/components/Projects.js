@@ -13,6 +13,7 @@ import colortiles from "../images/colortiles.png"
 import matchmingo from "../images/matchmingo.png"
 import lotterydapp from "../images/lotterydapp.png"
 import ainft from "../images/ainft.png"
+import cryptoswap from "../images/cryptoswap.png"
 
 export default function Projects() {
 
@@ -106,6 +107,12 @@ export default function Projects() {
             title: "AINFT",
             gitLink: "https://github.com/Dhruwang/AINFT",
             liveLink: "https://ainftbyjd.netlify.app/"
+        },
+        {
+            imgLink: cryptoswap,
+            title: "CryptoPay",
+            gitLink: "https://github.com/Dhruwang/CryptoPay",
+            liveLink: "https://cryptopaybyjd.netlify.app/"
         }
     ]
     return (
