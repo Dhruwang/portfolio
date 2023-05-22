@@ -9,7 +9,7 @@ export default function Skills() {
               <div className='skillDiv'>HTML</div>
               <div className='skillDiv'>CSS</div>
               <div className='skillDiv'>Javascript</div>
-              <div className='skillDiv'>Bootstrap</div>
+              <div className='skillDiv'>Typescript</div>
               <div className='skillDiv'>React</div>
               <div className='skillDiv'>NodeJS</div>
               <div className='skillDiv'>Express</div>
