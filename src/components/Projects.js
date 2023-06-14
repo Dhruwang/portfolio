@@ -10,7 +10,7 @@ import theclock from "../images/theclock.png"
 import nikehome from "../images/nikehome.png"
 import applewatch from "../images/applewatch.png"
 import colortiles from "../images/colortiles.png"
-import matchmingo from "../images/matchmingo.png"
+// import matchmingo from "../images/matchmingo.png" 
 import lotterydapp from "../images/lotterydapp.png"
 import ainft from "../images/ainft.png"
 import cryptoswap from "../images/cryptoswap.png"
@@ -18,13 +18,13 @@ import cryptoswap from "../images/cryptoswap.png"
 export default function Projects() {
 
     const projectsArr = [
-        {
-            imgLink: matchmingo,
-            title: "Matchmingo",
-            description: "Matchmingo is a college based dating App to connect People within college campus",
-            gitLink: "https://matchmingo.netlify.app",
-            liveLink: "https://matchmingo.netlify.app"
-        },
+        // {
+        //     imgLink: matchmingo,
+        //     title: "Matchmingo",
+        //     description: "Matchmingo is a college based dating App to connect People within college campus",
+        //     gitLink: "https://matchmingo.netlify.app",
+        //     liveLink: "https://matchmingo.netlify.app"
+        // },
         {
             imgLink: StoryItUp,
             title: "StoryItUp",
